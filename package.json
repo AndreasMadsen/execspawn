@@ -1,0 +1,31 @@
+{
+  "name": "execspawn",
+  "description": "spawn stream for child_process.exec",
+  "version": "0.2.0",
+  "author": "Andreas Madsen <amwebdk@gmail.com>",
+  "main": "./execspawn.js",
+  "scripts": {
+    "test": "tap test.js"
+  },
+  "repository" : {
+    "type": "git",
+    "url": "git://github.com/AndreasMadsen/execspawn.git"
+  },
+  "keywords": [
+    "exec",
+    "stream",
+    "spawn"
+  ],
+  "dependencies": {
+    "util-extend": "1.0.x"
+  },
+  "devDependencies": {
+    "tap": "0.4.x",
+    "endpoint": "0.4.x"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": "0.10",
+    "npm": "1"
+  }
+}
