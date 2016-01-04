@@ -1,6 +1,7 @@
 
 var extend = require('util-extend');
 var spawn = require('child_process').spawn;
+var fs = require('fs')
 
 module.exports = function execstream(command, options) {
   var file, args;
@@ -11,7 +12,8 @@ module.exports = function execstream(command, options) {
     args = ['/s', '/c', '"' + command + '"'];
     options.windowsVerbatimArguments = true;
   } else {
-    file = '/bin/sh';
+    var exists = fs.existsSync('/bin/bash')
+    file = exists ? '/bin/bash' : '/bin/sh';
     args = ['-c', command];
     options.windowsVerbatimArguments = false;
   }
