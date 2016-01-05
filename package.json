@@ -17,11 +17,11 @@
     "spawn"
   ],
   "dependencies": {
-    "util-extend": "1.0.x"
+    "util-extend": "^1.0.1"
   },
   "devDependencies": {
-    "tap": "0.6.x",
-    "endpoint": "0.4.x"
+    "tap": "^5.0.0",
+    "endpoint": "^0.4.5"
   },
   "license": "MIT"
 }
