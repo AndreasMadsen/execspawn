@@ -7,13 +7,17 @@ module.exports = function execstream(command, options) {
   options = extend({}, options);
 
   if (process.platform === 'win32') {
-    file = 'cmd.exe';
+    file = process.env.comspec || 'cmd.exe';
     args = ['/s', '/c', '"' + command + '"'];
     options.windowsVerbatimArguments = true;
   } else {
     file = '/bin/sh';
     args = ['-c', command];
     options.windowsVerbatimArguments = false;
+  }
+
+  if (options && options.shell) {
+    file = options.shell;
   }
 
   return spawn(file, args, options);
