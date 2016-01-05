@@ -14,7 +14,8 @@ npm install execspawn
 var execspawn = require('execspawn');
 
 var cmd = execspawn('echo "hallo world";', {
-  cwd: __dirname // all the spawn options
+  cwd: __dirname, // all the spawn options
+  shell: '/bin/bash' // shell to execute the command with
 });
 
 // all the streams
