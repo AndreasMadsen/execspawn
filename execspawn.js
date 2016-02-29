@@ -18,6 +18,7 @@ module.exports = function execstream(command, options) {
 
   if (options && options.shell) {
     file = options.shell;
+    delete options.shell;
   }
 
   return spawn(file, args, options);
